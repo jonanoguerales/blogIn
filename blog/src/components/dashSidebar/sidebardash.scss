@@ -1,0 +1,142 @@
+.sidebarDash{
+	flex: 1;
+	border-radius: 30px;
+	max-height: 95vh;
+	padding: 10px;
+	margin: 30px;
+	background-color: #272C4A;
+	color: #fff;
+
+
+	.topDash{
+		background-color: #272C4A;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 0;
+		width: 100%;
+		margin-top: 40px;
+
+		.lunita > img{
+			width: 40px;
+			margin-top: 5px;
+		}
+
+		.logo{
+			font-size: 22px;
+			font-weight: bold;
+
+			text-transform: uppercase;
+		}
+
+	}
+
+
+	.center{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: 100px;
+		width: 100%;
+
+
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			align-content: center;
+
+			li{
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				cursor: pointer;
+				padding: 10px 20px;
+				border-left: 4px solid transparent;
+				font-size: 20px;
+				transition: none;
+				width: 70%;
+
+
+				&:hover{
+					background: linear-gradient(180deg, #b964ee32 0%, #4fffc132 100%);
+					border-left: 4px solid;
+					box-sizing: content-box;
+					border-image: linear-gradient(180deg, #BA64EE 0%, #4FFFC0 100%);
+					border-image-slice: 1;
+				}
+
+				&:focus{
+					border-left: 4px solid;
+					box-sizing: content-box;
+					border-image: linear-gradient(180deg, #BA64EE 0%, #4FFFC0 100%);
+					border-image-slice: 1;
+				}
+
+				.icon{
+					font-style: 18px;
+					color: #fff;
+				}
+
+				span{
+					font-style: 14px;
+					font-weight: 600;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	.bottom{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 300px;
+
+		ul{
+			list-style: none;
+			padding: 0;
+
+			li{
+				display: flex;
+				align-items: center;
+				padding: 8px;
+				cursor: pointer;
+				width: 100%;
+				padding: 10px 0;
+
+				button{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 150px;
+					height: 60px;
+					background: #BA64EE;
+					cursor: pointer;
+					border: none;
+					border-radius: 14px;
+
+					font-family: 'Poppins';
+					font-weight: 600;
+					font-size: 18px;
+					line-height: 27px;
+					color: #EFF0FF;
+
+
+					&:hover{
+						background: linear-gradient(90deg, #BA64EE 0%, #4FFFC0 100%);
+						transition: 0.3s ease;
+					}
+					.icon{
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}

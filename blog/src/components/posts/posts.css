@@ -1,0 +1,122 @@
+.post {
+  width: 340px;
+  height: fit-content;
+  margin: 0px 25px 40px 25px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.postImg  {
+  width: 340px;
+  height: 215px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.postInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.postCat {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #be9656;
+  line-height: 19px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.postDate {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #000;
+  opacity: 0.6;
+}
+
+.postTitle {
+  font-family: "Patrick Hand", sans-serif;
+  font-weight: 400!important;
+  font-size: 32px;
+  line-height: 38px;
+  color: #1f1e3d;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.postDesc {
+  font-family: "Patrick Hand", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px!important;
+  line-height: 28px;
+  margin-top: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.post:hover{
+  background: #1f1e3de1;
+  border-radius: 10px;
+  color: #f2f2f2!important;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1)!important;
+}
+
+.post:hover .postTitle{
+  align-self: center;
+  text-align: center;
+  color: #f2f2f2;
+}
+.post:hover .postDesc{
+  align-self: center;
+  text-align: center;
+  color: #f2f2f2;
+  transition: all 0.3s ease-in-out;
+}
+.post:hover .postDate{
+  align-self: center;
+  text-align: center;
+  color: #f2f2f2;
+  transition: all 0.3s ease-in-out;
+}
+
+.post:hover .postImg{
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1200px){
+  .post {
+    width: 300px;
+  }
+
+  .postImg {
+    width: 300px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 1080px){
+  .post {
+    width: 270px;
+  }
+
+  .postImg {
+    width: 270px;
+    height: 200px;
+  }
+}

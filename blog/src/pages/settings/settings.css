@@ -1,0 +1,150 @@
+.settings {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+    flex-direction: column;
+    margin-top: -100px;
+  }
+
+  .settingsWrapper {
+    flex: 9;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .settingsTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+  .settingsTitleUpdate {
+    cursor: default;
+    font-family: 'Roboto'!important;
+    font-weight: 400;
+    font-size: 60px;
+    color: #1f1e3d;
+    text-align: center;
+    line-height: 100px;
+    font-weight: 700;
+  }
+
+  .settingsTitleDelete {
+    color: red;
+    text-decoration: 1px underline;
+    font-size: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    align-self: center;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .settingsForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .settingsPP {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .settingsPP > img {
+    height: 70px;
+    width: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  .settingsPPIcon {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    margin-left: 10px;
+    color: white;
+    background-color: #1f1e3d;
+    cursor: pointer;
+  }
+
+  .settingsPPButton:focus {
+    outline-style: none;
+  }
+
+  .settingsForm > label {
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: "Inter", sans-serif;
+  }
+
+  .settingsPPInput {
+    width: 30%;
+  }
+
+  .settingsForm > input {
+    border: none;
+    border-bottom: 2px solid #1f1e3d;
+    background: #f2f2f2;
+    outline: none;
+    padding: 5px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 30px;
+    background-color: #f2f2f2;
+    width: 50%;
+  }
+
+  .settingsSubmitButton {
+    align-self: center;
+    border: none;
+    background: #f2f2f2;
+    border: 2px solid #1f252d;
+    border-radius: 20px;
+    width: 140px;
+    height: 38px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #1f1e3d;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .settingsSubmitButton:hover {
+    color: #f2f2f2;
+    background: #1f1e3d;
+    border: 2px solid #1f252d;
+    transition: all 0.3s;
+  }
+
+  @media screen and (max-width: 840px) {
+    .settingsTitleUpdate {
+      font-weight: 400;
+      font-size: 60px;
+      margin-top: -80px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .settingsTitleUpdate {
+      font-weight: 400;
+      font-size: 40px;
+    }
+  }

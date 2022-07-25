@@ -1,0 +1,50 @@
+.home {
+  display: flex;
+  background: #e5e5e5;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.publiHome{
+  max-width: 1280px;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  margin: 0 auto;
+}
+
+#publi{
+  text-align: left;
+  margin: 41px 0 -20px;
+}
+.sideThings{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+
+@media screen and (max-width: 1280px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  #publi{
+    width: 100%;
+    align-self: center;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 860px) {
+  #publi{
+    align-self: center;
+    text-align: center;
+  }
+}

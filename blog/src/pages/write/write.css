@@ -1,0 +1,168 @@
+.write {
+  padding-top: 50px;
+  background: #f2f2f2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.writeImg {
+  width: 70vw;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.writeForm {
+  position: relative;
+}
+
+.writeFormGroup {
+  margin-left: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.writeIcon {
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  border: 1px solid;
+  border-radius: 50%;
+  color: #1f1e3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.writeInput {
+  font-size: 30px;
+  border: none;
+  padding: 20px;
+  width: 70vw;
+  margin-top: 10px;
+  background: #f2f2f2;
+  white-space: pre-line;
+  white-space: pre-wrap;
+  text-indent: 50px;
+}
+
+.writeInput::placeholder {
+  color: #bdb9b9;
+  font-weight: 400;
+}
+
+.writeInput:focus {
+  outline-style: none;
+}
+
+.writeText {
+  width: 70vw;
+  height: 100vh;
+  font-family: inherit;
+  font-size: 20px;
+  background: #f2f2f2;
+}
+
+.writeSubmit {
+  position: absolute;
+  top: 80px;
+  right: 100px;
+  color: #f2f2f2;
+  background-color: #1f1e3d;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  align-items: center;
+
+  width: 120px;
+  font-weight: 400;
+}
+
+.selectEdit{
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  width: 8em;
+  height: 2em;
+  border-radius: .25em;
+  text-align: center;
+  font-size: 18px;
+
+  outline: none;
+  cursor: pointer;
+  color: #1f1e3d;
+}
+
+.selectEdit option{
+  cursor: pointer;
+}
+/* Media querrys */
+
+@media screen and (max-width: 860px) {
+  .write {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form {
+    margin-left: 0;
+  }
+
+  .writeSubmit {
+    position: none;
+    top: 600px;
+    right: 110px;
+  }
+  .writeImg {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .selectEdit{
+    position: none;
+    top: 500px;
+    right: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .write {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .form {
+    margin-left: 0;
+  }
+
+  .writeSubmit {
+    position: none;
+    top: 600px;
+    right: 110px;
+  }
+  .selectEdit {
+    position: none;
+    top: 500px;
+    right: 100px;
+  }
+}
+
+.inputImagePlus{
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,177 @@
+.singlePost {
+  flex: 6 1;
+  float: left;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar{
+  top:0;
+  float: right;
+
+}
+.singlePostWrapper {
+  padding: 20px;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  width: 70%;
+}
+
+.singlePostImg {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  object-fit: cover;
+
+}
+
+.singlePostTitle {
+  text-align: center;
+  margin: 10px;
+  font-family: "Lora", serif;
+  font-size: 28px;
+}
+
+.singlePostTitleInput {
+  margin: 10px;
+  font-family: "Lora", serif;
+  font-size: 28px;
+  text-align: center;
+  border: none;
+  color: #1f1e3d;
+  border-bottom: 1px solid lightgray;
+  border-radius: 10px;
+  width: 0 auto;
+  background: #f2f2f2;
+}
+
+.singlePostTitleInput:focus {
+  outline: none;
+}
+
+.singlePostEdit {
+  float: right;
+  font-size: 16px;
+}
+
+.singlePostIcon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.singlePostIcon:first-child {
+  color: teal;
+}
+
+.singlePostIcon:last-child {
+  color: tomato;
+}
+
+.singlePostInfo {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+  color: #b39656;
+}
+
+.singlePostDesc {
+  color: #666;
+  font-size: 18px;
+  line-height: 25px;
+  white-space: pre-line;
+  text-align: justify;
+
+}
+
+.singlePostDesc::first-letter {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.singlePostDescInput {
+  width: 70vw;
+  height: 70vh;
+  font-family: inherit;
+  font-size: 20px;
+  background: #f2f2f2;
+  padding: 48px;
+  border: none;
+  border-radius: 10px;
+  text-align: justify;
+}
+
+.singlePostDescInput:focus {
+  outline: none;
+}
+
+.singlePostButton {
+  width: 100px;
+  border: none;
+  background-color: teal;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .singlePost{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 860px) {
+  .singlePost{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar{
+
+  }
+}
+
+.comments{
+  loat: left;
+  width: 80%;
+}
+
+.commentSecti{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+
+.CambiarImgPostCont {
+  overflow: visible;
+  margin-top: 20px;
+  text-align: center;
+
+}
+
+.CambiarImgPost {
+  height: 30px!important;
+  width: 30px!important;
+  cursor: pointer;
+}

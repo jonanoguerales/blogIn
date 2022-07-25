@@ -1,0 +1,101 @@
+.tablas{
+  min-height: 100vh;
+  display: flex;
+  background: #1E1E3D;
+}
+
+.tablasContainer{
+  flex: 6;
+}
+
+
+.Users {
+  text-align: center;
+}
+
+.container {
+  min-height: 700px;
+}
+
+.Users-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.registerPostsTitle{
+  cursor: default;
+  font-family: 'Erica One', cursive;
+  font-size: 40px;
+  color: #1f1e3d;
+  line-height: 50px;
+}
+
+.imgPost {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Users-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.Users-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Users-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button.btn.btn-primary {
+  background: #1f1e3d;
+}
+
+button.btn.btn-danger {
+  background: tomato;
+}
+
+.tbdoyEdit  tr{
+  vertical-align: middle;
+}
+
+.tbdoyEdit, th, td{
+  text-align: center;
+}
+
+.myTable {
+  background: #f2f2f2!important;
+  border-radius: 10px;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
+
+table.myTable.table {
+  background: #f2f2f2!important;
+  border-radius: 10px;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
+
+.table>:not(caption)>*>*{
+  padding-top: 20px!important;
+}
