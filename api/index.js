@@ -42,7 +42,7 @@ dotenv.config()
 app.use(express.json())
 app.use('/images', express.static(path.join(__dirname, '/images')))
 
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect('mongodb+srv://Jona:Jona@cluster0.nqu0a.mongodb.net/blog?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -73,6 +73,8 @@ app.use('/api/comments', commentsRoute)
 app.use('/api/visitas', visitasRoute)
 app.use('/api/usersNuevos', usersNuevosRoute)
 
-server.listen(7000, () => {
+const PORT = process.env.PORT || 3001
+
+server.listen(PORT, () => {
   console.log('Server Runnig')
 })
