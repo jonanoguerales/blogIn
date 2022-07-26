@@ -15,12 +15,12 @@ const Single = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/posts')
+      const res = await axios.get('https://api-blog-nine.vercel.app/api/posts')
       setPosts(res.data)
     }
     fetchPosts()
     const fetchUsers = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/users')
+      const res = await axios.get('https://api-blog-nine.vercel.app/api/users')
       setUsers(res.data)
     }
     fetchUsers()
@@ -29,10 +29,10 @@ const Single = () => {
   const todosUsers = []
   users.map(usertodo => {
     if (usertodo.username === path) {
-      todosUsers.push(usertodo)
+      todosUsers.concat(usertodo)
     } else {
       if (usertodo._id === path) {
-        todosUsers.push(usertodo)
+        todosUsers.concat(usertodo)
       }
     }
     return todosUsers

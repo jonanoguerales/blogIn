@@ -10,7 +10,7 @@ const Header = () => {
   const [posts, setPosts] = useState([])
   useEffect(() => {
     const fetchPost = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/posts')
+      const res = await axios.get('https://api-blog-nine.vercel.app/api/posts')
       setPosts(res.data)
     }
     fetchPost()

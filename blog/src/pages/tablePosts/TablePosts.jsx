@@ -20,7 +20,7 @@ function Posts () {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/posts')
+      const res = await axios.get('https://api-blog-nine.vercel.app/api/posts')
       setPosts(res.data)
     }
     fetchPosts()
@@ -53,7 +53,7 @@ function Posts () {
       })
       setPosts(dataNueva)
 
-      await axios.put(`https://api-blog-nine.vercel.app/post/${postSeleccionado._id}`, {
+      await axios.put(`https://api-blog-nine.vercel.app/api/post/${postSeleccionado._id}`, {
         username: postSeleccionado.username,
         title: postSeleccionado.title,
         desc: postSeleccionado.desc,
@@ -67,7 +67,7 @@ function Posts () {
   const handleDelete = async () => {
     try {
       setPosts(posts.filter(post => post._id !== postSeleccionado._id))
-      await axios.delete(`https://api-blog-nine.vercel.app/post/${postSeleccionado._id}`, {
+      await axios.delete(`https://api-blog-nine.vercel.app/api/post/${postSeleccionado._id}`, {
         data: { username: postSeleccionado._id }
       })
       setModalEliminar(false)

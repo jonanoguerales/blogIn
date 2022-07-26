@@ -16,7 +16,7 @@ const Comments = ({ post }) => {
       comment
     }
     try {
-      await axios.post('https://api-blog-nine.vercel.app/comments', newComment)
+      await axios.post('https://api-blog-nine.vercel.app/api/comments', newComment)
       // console.log('Se ha añadido correctamente')
     } catch (err) { console.log(err) }
   }

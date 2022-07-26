@@ -19,7 +19,7 @@ const Settings = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://api-blog-nine.vercel.app/users/${user._id}`, {
+      await axios.delete(`https://api-blog-nine.vercel.app/api/users/${user._id}`, {
         data: { username: user.username }
       })
       dispatch({ type: 'LOGOUT' })
@@ -44,11 +44,11 @@ const Settings = () => {
       data.append('file', file)
       updatedUser.profilePic = filename
       try {
-        await axios.post('https://api-blog-nine.vercel.app/upload', data)
+        await axios.post('https://api-blog-nine.vercel.app/api/upload', data)
       } catch (err) { console.log(err) }
     }
     try {
-      const res = await axios.put('https://api-blog-nine.vercel.app/users/' + user._id, updatedUser)
+      const res = await axios.put('https://api-blog-nine.vercel.app/api/users/' + user._id, updatedUser)
       setSuccess(true)
       dispatch({ type: 'UPDATE_SUCCESS', payload: res.data })
       setInterval(window.location.reload(), 5000)

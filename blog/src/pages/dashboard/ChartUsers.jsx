@@ -7,7 +7,7 @@ const ChartUsers = () => {
 
   useEffect(() => {
     const fetchDates = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/users')
+      const res = await axios.get('https://api-blog-nine.vercel.app/api/users')
       setDates(res.data)
     }
     fetchDates()

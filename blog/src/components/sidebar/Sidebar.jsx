@@ -14,12 +14,12 @@ const Sidebar = () => {
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/categories')
+      const res = await axios.get('https://api-blog-nine.vercel.app/api/categories')
       setCats(res.data)
     }
     getCats()
     const fetchPosts = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/posts')
+      const res = await axios.get('https://api-blog-nine.vercel.app/api/posts')
       setPosts(res.data)
     }
     fetchPosts()

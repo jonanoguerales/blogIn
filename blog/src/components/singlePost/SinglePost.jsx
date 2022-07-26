@@ -23,7 +23,7 @@ export default function SinglePost () {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/posts/' + path)
+      const res = await axios.get('https://api-blog-nine.vercel.app/api/posts/' + path)
       setPost(res.data)
       setTitle(res.data.title)
       setDesc(res.data.desc)
@@ -33,7 +33,7 @@ export default function SinglePost () {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://api-blog-nine.vercel.app/posts/${post._id}`, {
+      await axios.delete(`https://api-blog-nine.vercel.app/api/posts/${post._id}`, {
         data: { username: user.username }
       })
       window.location.replace('/')
@@ -53,11 +53,11 @@ export default function SinglePost () {
       data.append('file', file)
       updatePost.photo = filename
       try {
-        await axios.post('https://api-blog-nine.vercel.app/upload', data)
+        await axios.post('https://api-blog-nine.vercel.app/api/upload', data)
       } catch (err) { console.log(err) }
     }
     try {
-      await axios.put(`https://api-blog-nine.vercel.app/posts/${post._id}`, updatePost)
+      await axios.put(`https://api-blog-nine.vercel.app/api/posts/${post._id}`, updatePost)
       setUpdateMode(false)
     } catch (err) { console.log(err) }
   }

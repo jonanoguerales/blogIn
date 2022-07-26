@@ -27,12 +27,12 @@ const Write = () => {
       data.append('file', file)
       newPost.photo = filename // Usa el dato guardado en filename para guardarlo tambien en newPost.photo
       try {
-        await axios.post('https://api-blog-nine.vercel.app/upload', data)
+        await axios.post('https://api-blog-nine.vercel.app/api/upload', data)
       } catch (err) { console.log(err) }
     }
     try {
-      const res = await axios.post('https://api-blog-nine.vercel.app/posts', newPost)
-      window.location.replace('https://api-blog-nine.vercel.app/post/' + res.data._id)
+      const res = await axios.post('https://api-blog-nine.vercel.app/api/posts', newPost)
+      window.location.replace('/post/' + res.data._id)
     } catch (err) { console.log(err) }
   }
   return (

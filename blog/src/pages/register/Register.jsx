@@ -49,7 +49,7 @@ const Register = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/users')
+      const res = await axios.get('https://api-blog-nine.vercel.app/api/users')
       setUsers(res.data)
     }
     fetchUsers()
@@ -77,7 +77,7 @@ const Register = () => {
       if (alluser.includes(username)) {
         setSuccess(true)
       } else {
-        const res = await axios.post('https://api-blog-nine.vercel.app/auth/register', {
+        const res = await axios.post('https://api-blog-nine.vercel.app/api/auth/register', {
           username,
           nombre,
           email,
