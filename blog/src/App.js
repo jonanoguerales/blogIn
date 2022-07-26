@@ -1,11 +1,11 @@
+import React, { useState } from 'react'
 import AuthProvider from './auth/AuthProvider'
 import AppRouter from './routers/AppRouter'
 import io from 'socket.io-client'
-import { useState } from 'react'
 import axios from 'axios'
 
 //  Conf socket
-const socket = io.connect('http://localhost:7000')
+const socket = io.connect('https://api-blog-nine.vercel.app')
 function App () {
   const [visitas, setVisitas] = useState(0)
 

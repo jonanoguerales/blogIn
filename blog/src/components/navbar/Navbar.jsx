@@ -1,6 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState, useEffect, useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { useContext, useEffect, useState } from 'react'
 import { Context } from '../../context/Context'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' // Importamos el componente para poder utilizar los iconos
 import { faUserEdit, faUserCircle, faChartLine, faPaperclip, faUsers, faSignOutAlt } from '@fortawesome/free-solid-svg-icons' // El icono o iconos a utilizar
@@ -9,7 +8,7 @@ import './navbar.css'
 
 const Navbar = () => {
   const { user, dispatch } = useContext(Context)
-  const PF = 'http://localhost:7000/images/'
+  const PF = 'https://api-blog-nine.vercel.app/images/'
 
   const handleLogout = () => {
     dispatch({ type: 'LOGOUT' })
@@ -26,7 +25,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const res = await axios.get('/posts' + search)
+      const res = await axios.get('https://api-blog-nine.vercel.app/posts' + search)
       setPosts(res.data)
     }
     fetchPost()

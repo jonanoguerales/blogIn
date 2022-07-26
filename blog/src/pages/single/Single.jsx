@@ -1,6 +1,6 @@
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import { useEffect, useState } from 'react'
 import Post from '../../components/post/Post'
 import './single.scss'
 import Navbar from '../../components/navbar/Navbar'
@@ -11,16 +11,16 @@ const Single = () => {
   const path = location.pathname.split('/')[2]
   const [users, setUsers] = useState([])
   const [posts, setPosts] = useState([])
-  const PF = 'http://localhost:7000/images/'
+  const PF = 'https://api-blog-nine.vercel.app/images/'
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('/posts')
+      const res = await axios.get('https://api-blog-nine.vercel.app/posts')
       setPosts(res.data)
     }
     fetchPosts()
     const fetchUsers = async () => {
-      const res = await axios.get('/users')
+      const res = await axios.get('https://api-blog-nine.vercel.app/users')
       setUsers(res.data)
     }
     fetchUsers()

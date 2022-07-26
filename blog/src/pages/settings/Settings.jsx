@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Context } from '../../context/Context'
 import './settings.css'
 import axios from 'axios'
@@ -15,11 +15,11 @@ const Settings = () => {
   const [telefono, setTelefono] = useState('')
   const [success, setSuccess] = useState(false)
   const { user, dispatch } = useContext(Context)
-  const PF = 'http://localhost:7000/images/'
+  const PF = 'https://api-blog-nine.vercel.app/images/'
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/users/${user._id}`, {
+      await axios.delete(`https://api-blog-nine.vercel.app/users/${user._id}`, {
         data: { username: user.username }
       })
       dispatch({ type: 'LOGOUT' })
@@ -44,11 +44,11 @@ const Settings = () => {
       data.append('file', file)
       updatedUser.profilePic = filename
       try {
-        await axios.post('/upload', data)
+        await axios.post('https://api-blog-nine.vercel.app/upload', data)
       } catch (err) { console.log(err) }
     }
     try {
-      const res = await axios.put('/users/' + user._id, updatedUser)
+      const res = await axios.put('https://api-blog-nine.vercel.app/users/' + user._id, updatedUser)
       setSuccess(true)
       dispatch({ type: 'UPDATE_SUCCESS', payload: res.data })
       setInterval(window.location.reload(), 5000)

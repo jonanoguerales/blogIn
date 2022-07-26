@@ -7,7 +7,7 @@ const LineChart = () => {
 
   useEffect(() => {
     const fetchVisits = async () => {
-      const res = await axios.get('/visitas')
+      const res = await axios.get('https://api-blog-nine.vercel.app/visitas')
       setVisits(res.data)
     }
     fetchVisits()

@@ -1,16 +1,16 @@
 import './header.css'
 import Carousel from 'nuka-carousel'
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 const Header = () => {
-  const PF = 'http://localhost:7000/images/'
+  const PF = 'https://api-blog-nine.vercel.app/images/'
 
   const [posts, setPosts] = useState([])
   useEffect(() => {
     const fetchPost = async () => {
-      const res = await axios.get('/posts')
+      const res = await axios.get('https://api-blog-nine.vercel.app/posts')
       setPosts(res.data)
     }
     fetchPost()

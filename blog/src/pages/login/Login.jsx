@@ -1,7 +1,7 @@
+import React, { useContext, useRef, useState } from 'react'
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import axios from 'axios'
-import { useContext, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/navbar/Navbar'
 import { Context } from '../../context/Context'
@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault()
     dispatch({ type: 'LOGIN_START' })
     try {
-      const res = await axios.post('/auth/login', {
+      const res = await axios.post('https://api-blog-nine.vercel.app/auth/login', {
         username: userRef.current.value,
         password: passwordRef.current.value
       })

@@ -1,6 +1,5 @@
-/* eslint-disable array-callback-return */
+import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { useState, useEffect, useContext } from 'react'
 import './sidebar.css'
 import axios from 'axios'
 import { Context } from '../../context/Context'
@@ -11,16 +10,16 @@ const Sidebar = () => {
   const [cats, setCats] = useState([])
   const { user } = useContext(Context)
   const [posts, setPosts] = useState([])
-  const PF = 'http://localhost:7000/images/'
+  const PF = 'https://api-blog-nine.vercel.app/images/'
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axios.get('/categories')
+      const res = await axios.get('https://api-blog-nine.vercel.app/categories')
       setCats(res.data)
     }
     getCats()
     const fetchPosts = async () => {
-      const res = await axios.get('/posts')
+      const res = await axios.get('https://api-blog-nine.vercel.app/posts')
       setPosts(res.data)
     }
     fetchPosts()
@@ -32,6 +31,7 @@ const Sidebar = () => {
       if (post.username === user.username) {
         userPosts.push(post)
       }
+      return userPosts
     })
   }
   console.log(userPosts)

@@ -1,3 +1,4 @@
+import React from 'react'
 import './dashboard.scss'
 import BarChart from './BarChart'
 import SidebarDash from '../../components/dashSidebar/SidebarDash'

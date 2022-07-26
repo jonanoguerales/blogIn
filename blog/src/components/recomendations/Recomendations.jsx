@@ -1,15 +1,15 @@
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './recomendations.css'
 
 const Recomendations = () => {
   const [posts, setPosts] = useState([])
-  const PF = 'http://localhost:7000/images/'
+  const PF = 'https://api-blog-nine.vercel.app/images/'
 
   useEffect(() => {
     const fetchPost = async () => {
-      const res = await axios.get('/posts')
+      const res = await axios.get('https://api-blog-nine.vercel.app/posts')
       setPosts(res.data)
     }
     fetchPost()

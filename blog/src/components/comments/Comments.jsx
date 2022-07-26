@@ -5,8 +5,6 @@ import './comments.css'
 
 const Comments = ({ post }) => {
   const [comment, setComment] = useState('')
-  // const [name, setName] = useState("");
-  // const [id_post, setPostid] = useState("");
   const { user } = useContext(Context)
   console.log()
 
@@ -18,9 +16,8 @@ const Comments = ({ post }) => {
       comment
     }
     try {
-      await axios.post('/comments', newComment)
-      console.log('Se ha añadido correctamente')
-      // window.location.reload();
+      await axios.post('https://api-blog-nine.vercel.app/comments', newComment)
+      // console.log('Se ha añadido correctamente')
     } catch (err) { console.log(err) }
   }
   return (

@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' // Importamos el componente para poder utilizar los iconos
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons' // El icono a utilizar
 import { Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeError } from '../../components/validacion/elements/Formularios'
@@ -49,7 +49,7 @@ const Register = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await axios.get('/users')
+      const res = await axios.get('https://api-blog-nine.vercel.app/users')
       setUsers(res.data)
     }
     fetchUsers()
@@ -77,7 +77,7 @@ const Register = () => {
       if (alluser.includes(username)) {
         setSuccess(true)
       } else {
-        const res = await axios.post('/auth/register', {
+        const res = await axios.post('https://api-blog-nine.vercel.app/auth/register', {
           username,
           nombre,
           email,

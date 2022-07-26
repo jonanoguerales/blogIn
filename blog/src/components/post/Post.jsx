@@ -1,8 +1,9 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './post.css'
 
 const Post = ({ post }) => {
-  const PF = 'http://localhost:7000/images/'
+  const PF = 'https://api-blog-nine.vercel.app/images/'
   return (
     <div className='post'>
       <Link to={`/post/${post._id}`} className='link'>
