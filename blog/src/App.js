@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import AuthProvider from './auth/AuthProvider'
 import AppRouter from './routers/AppRouter'
-import io from 'socket.io-client'
-import axios from 'axios'
-
+// import io from 'socket.io-client'
+// import axios from 'axios'
+/*
 //  Conf socket
 const socket = io.connect('https://api-blog-nine.vercel.app')
 function App () {
@@ -12,17 +12,20 @@ function App () {
   socket.on('count', data => {
     setVisitas(data.count)
   })
-  const enviarVisitas = async () => {
-    const newvisitas = {
-      total: visitas,
-      totalDia: visitas
+  useEffect(() => {
+    const enviarVisitas = async () => {
+      const newvisitas = {
+        total: visitas,
+        totalDia: visitas
+      }
+      try {
+        await axios.put('/visitas/62adf849f4f9c09381c80068', newvisitas)
+      } catch (err) { console.log(err) }
     }
-    try {
-      await axios.put('/visitas/62adf849f4f9c09381c80068', newvisitas)
-    } catch (err) { console.log(err) }
-  }
-  enviarVisitas()
-
+    enviarVisitas()
+  }, [visitas])
+*/
+function App () {
   return (
     <div>
       <AuthProvider>

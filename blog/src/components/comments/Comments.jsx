@@ -6,7 +6,6 @@ import './comments.css'
 const Comments = ({ post }) => {
   const [comment, setComment] = useState('')
   const { user } = useContext(Context)
-  console.log()
 
   const handleSubmit = async (e) => {
     e.preventDefault()

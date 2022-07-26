@@ -18,6 +18,7 @@ const Home = () => {
       setPosts(res.data)
     }
     fetchPost()
+    console.log('cambio')
   }, [search])
   return (
     <>

@@ -21,6 +21,7 @@ const categoryRoute = require('./routes/categories')// Para conectar con base de
 
 app.use(cors())
 
+/*
 // socket conf
 const server = http.createServer(app)
 
@@ -36,7 +37,7 @@ io.on('connection', (socket) => {
     socket.emit('count', { count })
     count = count + 1
   }
-})
+}) */
 
 dotenv.config()
 app.use(express.json())
