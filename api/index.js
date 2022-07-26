@@ -4,8 +4,8 @@ const dotenv = require('dotenv') // Para ocultar credenciales
 const mongoose = require('mongoose') // Para conectar con base de datos
 const multer = require('multer')
 const path = require('path')
-const http = require('http')
-const { Server } = require('socket.io')
+// const http = require('http')
+// const { Server } = require('socket.io')
 const cors = require('cors')
 
 // Routes
@@ -76,6 +76,6 @@ app.use('/api/usersNuevos', usersNuevosRoute)
 
 const PORT = process.env.PORT || 3001
 
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log('Server Runnig')
 })
