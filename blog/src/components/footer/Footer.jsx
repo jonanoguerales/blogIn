@@ -4,7 +4,7 @@ import './footer.css'
 const Footer = () => {
   return (
     <div className='footer'>
-      <div class='footerInfo'>
+      <div className='footerInfo'>
         <h2>Copyright © | SouJabbar & Jonathan</h2>
       </div>
       <div className='footerIcons'>

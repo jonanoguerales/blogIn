@@ -26,15 +26,15 @@ const Contacto = () => {
         <div className='formData'>
           <div className='formContainer'>
             <form className='contactForm' ref={form} onSubmit={sendEmail}>
-              <label className='contactLabel' htmlFor=''>
+              <label className='contactLabel'>
                 Nombre completo
               </label>
               <input type='text' className='contactInput' name='user_name' />
-              <label className='contactLabel' htmlFor=''>
+              <label className='contactLabel'>
                 E-mail
               </label>
               <input type='email' className='contactInput' name='user_email' />
-              <label className='contactLabel' htmlFor=''>
+              <label className='contactLabel'>
                 Mensaje
               </label>
               <textarea name='user_message' className='contactInput' cols='30' rows='3' />

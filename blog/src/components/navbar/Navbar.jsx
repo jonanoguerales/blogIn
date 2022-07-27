@@ -42,7 +42,7 @@ const Navbar = () => {
     <div className='top'>
       <div className='topLeft hamburger-menu'>
         <input id='menu__toggle' type='checkbox' />
-        <label class='menu__btn' for='menu__toggle'>
+        <label className='menu__btn' htmlFor='menu__toggle'>
           <span />
         </label>
         <ul className='topList menu__box'>
@@ -57,7 +57,7 @@ const Navbar = () => {
           </Link>
           {user?.role === 'admin' &&
             <li><a className='topListItem menu__item adminli' aria-haspopup='true' style={{ textDecoration: 'none' }}>Admin</a>
-              <ul class='mydropdown' aria-label='submenu'>
+              <ul className='mydropdown' aria-label='submenu'>
                 <Link className='link' to='/dashboard' target='_blank'>
                   <li className='topListItem menu__item '>
                     <FontAwesomeIcon icon={faChartLine} className='leftpa' />
@@ -93,7 +93,7 @@ const Navbar = () => {
                     alt=''
                   />
                 </a>
-                <ul class='mydropdown mydropdownUSER' aria-label='submenu'>
+                <ul className='mydropdown mydropdownUSER' aria-label='submenu'>
                   <Link className='link' to={`/perfil/${user._id}`}>
                     <li className='topListItem  '>
                       <FontAwesomeIcon icon={faUserCircle} className='leftpa' />
@@ -128,9 +128,9 @@ const Navbar = () => {
               </Link>
             </ul>
             )}
-        <div class='search_container'>
+        <div className='search_container'>
           <input type='text' placeholder='Busca tu post...' value={searcha} onChange={searcher} />
-          <div class='search' />
+          <div className='search' />
           <div className='searchResult'>
             {results.map((item) => (
               <Link key={item._id} to={`/post/${item._id}`} className='link'> {/* Redirige a la página del post del usuario que lo ha creado, con el id del usuario */}
