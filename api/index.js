@@ -19,7 +19,11 @@ const visitasRoute = require('./routes/visitas')
 const usersNuevosRoute = require('./routes/usersNuevos')
 const categoryRoute = require('./routes/categories')// Para conectar con base de datos
 
-app.use(cors())
+const corsOptions = {
+  origen: 'https://blog-in.vercel.app',
+  optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions))
 
 /*
 // socket conf
