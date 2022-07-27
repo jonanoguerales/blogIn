@@ -18,7 +18,6 @@ const Home = () => {
       setPosts(res.data)
     }
     fetchPost()
-    console.log('cambio')
   }, [search])
   return (
     <>
@@ -28,6 +27,7 @@ const Home = () => {
         <h1 id='publi'>Publicaciones</h1>
       </div>
       <div className='home'>
+        {posts.length === 0 && <p>Cargando....</p>}
         <Posts posts={posts} />
         <div className='sideThings'>
           <Sidebar posts={posts} />

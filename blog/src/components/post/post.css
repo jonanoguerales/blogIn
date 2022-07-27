@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   margin: 20px;
   height: fit-content;
+  min-height: 100vh;
 }
 
 
