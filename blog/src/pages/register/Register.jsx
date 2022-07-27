@@ -56,7 +56,6 @@ const Register = () => {
   }, [])
 
   const alluser = users.map((user) => (user.username))
-  console.log(alluser)
   const onSubmit = async (e) => {
     e.preventDefault()
     if (
