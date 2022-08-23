@@ -4,7 +4,6 @@ import { useLocation } from 'react-router'
 import { Link } from 'react-router-dom'
 import { Context } from '../../context/Context'
 import Comments from '../comments/Comments'
-import Commentario from '../comment/Commentario'
 import Navbar from '../navbar/Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' // Importamos el componente para poder utilizar los iconos
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons' // El icono o iconos a utilizar
@@ -136,9 +135,6 @@ export default function SinglePost () {
               Update
             </button>
           )}
-        </div>
-        <div className='commentSecti'>
-          <Commentario post={post} />
         </div>
         <Comments post={post} className='comments' />
       </div>

@@ -5,12 +5,13 @@ import axios from 'axios'
 import { Context } from '../../context/Context'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' // Importamos el componente para poder utilizar los iconos
 import { faUser, faAt, faClipboardList } from '@fortawesome/free-solid-svg-icons' // El icono o iconos a utilizar
+import GetPosts from '../../services/getPosts'
 
 const Sidebar = () => {
   const [cats, setCats] = useState([])
   const { user } = useContext(Context)
-  const [posts, setPosts] = useState([])
   const PF = 'https://api-blog-nine.vercel.app/images/'
+  const posts = GetPosts()
 
   useEffect(() => {
     const getCats = async () => {
@@ -18,11 +19,6 @@ const Sidebar = () => {
       setCats(res.data)
     }
     getCats()
-    const fetchPosts = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/api/posts')
-      setPosts(res.data)
-    }
-    fetchPosts()
   }, [])
 
   const userPosts = []

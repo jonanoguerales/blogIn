@@ -73,6 +73,15 @@
   flex-direction: column;
 }
 
+.commentSecti{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
 @media screen and (max-width: 840px) {
   .comments input{
     width: 100%;

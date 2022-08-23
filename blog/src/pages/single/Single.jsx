@@ -29,10 +29,10 @@ const Single = () => {
   const todosUsers = []
   users.map(usertodo => {
     if (usertodo.username === path) {
-      todosUsers.concat(usertodo)
+      todosUsers.push(usertodo)
     } else {
       if (usertodo._id === path) {
-        todosUsers.concat(usertodo)
+        todosUsers.push(usertodo)
       }
     }
     return todosUsers
@@ -42,10 +42,10 @@ const Single = () => {
 
   posts.map(post => {
     if (post.username === path) {
-      userPosts.concat(post)
+      userPosts.push(post)
     } else {
       if (post.id_user === path) {
-        userPosts.concat(post)
+        userPosts.push(post)
       }
     }
     return userPosts

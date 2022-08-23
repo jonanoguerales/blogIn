@@ -143,25 +143,12 @@
     flex-direction: column;
     align-items: center;
   }
-  .sidebar{
-
-  }
 }
 
 .comments{
-  loat: left;
+  float: left;
   width: 80%;
 }
-
-.commentSecti{
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-}
-
 
 .CambiarImgPostCont {
   overflow: visible;

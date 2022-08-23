@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import './commentario.css'
 
-const Commentario = ({ post }) => {
+const Commentario = ({ post, click }) => {
   const [comments, setComment] = useState([])
 
   useEffect(() => {
@@ -12,7 +12,7 @@ const Commentario = ({ post }) => {
       setComment(res.data)
     }
     fetchComment()
-  }, [comments])
+  }, [click])
 
   const arrayComment = []
   comments.map(comm => {

@@ -1,10 +1,12 @@
 import axios from 'axios'
 import { useContext, useState } from 'react'
 import { Context } from '../../context/Context'
+import Commentario from '../comment/Commentario'
 import './comments.css'
 
 const Comments = ({ post }) => {
   const [comment, setComment] = useState('')
+  const [click, setClick] = useState(false)
   const { user } = useContext(Context)
 
   const handleSubmit = async (e) => {
@@ -16,11 +18,13 @@ const Comments = ({ post }) => {
     }
     try {
       await axios.post('https://api-blog-nine.vercel.app/api/comments', newComment)
-      // console.log('Se ha añadido correctamente')
-    } catch (err) { console.log(err) }
+    } catch (err) { alert('comentario vacio') }
   }
   return (
     <>
+      <div className='commentSecti'>
+        <Commentario post={post} click={click} />
+      </div>
       <div className='comments'>
         <form className='commentForm' onSubmit={handleSubmit}>
           <span className='commentTittle'>Dejar Comentario</span>
@@ -38,7 +42,7 @@ const Comments = ({ post }) => {
             autoFocus
             onChange={e => setComment(e.target.value)}
           />
-          <button className='commentBTN' type='submit'>Dejar comentario</button>
+          <button className='commentBTN' type='submit' onClick={() => setClick(state => !state)}>Dejar comentario</button>
         </form>
       </div>
     </>
