@@ -1,24 +1,20 @@
-.dashboardHome{
+.dashboardHome {
 	display: flex;
 	background-color: #1E1E3D;
 
-
-	.homeContainer{
+	.homeContainer {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		flex: 6;
 		border-radius: 30px;
 		min-height: 100vh;
-		// padding: 10px;
-		// margin: 30px;
-		// background-color: #272C4A;
 
-		.centerItems{
+		.centerItems {
 			width: 70%;
 		}
 
-		.charts{
+		.charts {
 			display: flex;
 			padding: 20px;
 			gap: 20px;

@@ -41,7 +41,7 @@ const SidebarDash = () => {
           <li>
             <Link to='/' style={{ textDecoration: 'none' }}>
               <button>
-                <FontAwesomeIcon icon='fa-solid fa-arrow-right-from-bracket' />Salir
+                Salir
               </button>
             </Link>
           </li>
