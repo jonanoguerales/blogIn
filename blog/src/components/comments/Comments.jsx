@@ -17,7 +17,7 @@ const Comments = ({ post }) => {
       comment
     }
     try {
-      await axios.post('https://api-blog-nine.vercel.app/api/comments', newComment)
+      await axios.post('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/comments', newComment)
     } catch (err) { alert('comentario vacio') }
   }
   return (

@@ -8,7 +8,7 @@ function GetPosts () {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/api/posts' + search)
+      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/posts' + search)
       setPosts(res.data)
     }
     fetchPost()

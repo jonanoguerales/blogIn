@@ -8,7 +8,7 @@ const Commentario = ({ post, click }) => {
 
   useEffect(() => {
     const fetchComment = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/api/comments')
+      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/comments')
       setComment(res.data)
     }
     fetchComment()

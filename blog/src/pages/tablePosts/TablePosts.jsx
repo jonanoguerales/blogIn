@@ -16,11 +16,11 @@ import SidebarDash from '../../components/dashSidebar/SidebarDash'
 
 function Posts () {
   const [posts, setPosts] = useState([])
-  const PF = 'https://api-blog-nine.vercel.app/images/'
+  const PF = 'https://apirest-cip5r1lpe-jonanoguerales.vercel.app/images/'
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/api/posts')
+      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/posts')
       setPosts(res.data)
     }
     fetchPosts()
@@ -53,7 +53,7 @@ function Posts () {
       })
       setPosts(dataNueva)
 
-      await axios.put(`https://api-blog-nine.vercel.app/api/post/${postSeleccionado._id}`, {
+      await axios.put(`https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/post/${postSeleccionado._id}`, {
         username: postSeleccionado.username,
         title: postSeleccionado.title,
         desc: postSeleccionado.desc,
@@ -67,7 +67,7 @@ function Posts () {
   const handleDelete = async () => {
     try {
       setPosts(posts.filter(post => post._id !== postSeleccionado._id))
-      await axios.delete(`https://api-blog-nine.vercel.app/api/post/${postSeleccionado._id}`, {
+      await axios.delete(`https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/post/${postSeleccionado._id}`, {
         data: { username: postSeleccionado._id }
       })
       setModalEliminar(false)

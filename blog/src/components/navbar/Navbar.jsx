@@ -8,7 +8,7 @@ import './navbar.css'
 
 const Navbar = () => {
   const { user, dispatch } = useContext(Context)
-  const PF = 'https://api-blog-nine.vercel.app/images/'
+  const PF = 'https://apirest-cip5r1lpe-jonanoguerales.vercel.app/images/'
 
   const handleLogout = () => {
     dispatch({ type: 'LOGOUT' })
@@ -25,7 +25,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/api/posts' + search)
+      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/posts' + search)
       setPosts(res.data)
     }
     fetchPost()

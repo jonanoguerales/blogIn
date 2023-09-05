@@ -5,11 +5,11 @@ import './recomendations.css'
 
 const Recomendations = () => {
   const [posts, setPosts] = useState([])
-  const PF = 'https://api-blog-nine.vercel.app/images/'
+  const PF = 'https://apirest-cip5r1lpe-jonanoguerales.vercel.app/images/'
 
   useEffect(() => {
     const fetchPost = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/api/posts')
+      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/posts')
       setPosts(res.data)
     }
     fetchPost()

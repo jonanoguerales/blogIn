@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './post.css'
 
 const Post = ({ post }) => {
-  const PF = 'https://api-blog-nine.vercel.app/images/'
+  const PF = 'https://apirest-cip5r1lpe-jonanoguerales.vercel.app/images/'
   return (
     <div className='post'>
       <Link to={`/post/${post._id}`} className='link'>

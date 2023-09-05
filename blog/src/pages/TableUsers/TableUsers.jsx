@@ -17,11 +17,11 @@ import {
 
 function Users () {
   const [users, setUsers] = useState([])
-  const PF = 'https://api-blog-nine.vercel.app/images/'
+  const PF = 'https://apirest-cip5r1lpe-jonanoguerales.vercel.app/images/'
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await axios.get('https://api-blog-nine.vercel.app/api/users')
+      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/users')
       setUsers(res.data)
     }
     fetchUsers()
@@ -56,7 +56,7 @@ function Users () {
       })
       setUsers(dataNueva)
 
-      await axios.put(`https://api-blog-nine.vercel.app/api/user/${userSeleccionado._id}`, {
+      await axios.put(`https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/user/${userSeleccionado._id}`, {
         username: userSeleccionado.username,
         nombre: userSeleccionado.nombre,
         email: userSeleccionado.email,
@@ -71,7 +71,7 @@ function Users () {
   const handleDelete = async () => {
     try {
       setUsers(users.filter(user => user._id !== userSeleccionado._id))
-      await axios.delete(`https://api-blog-nine.vercel.app/api/users/${userSeleccionado._id}`, {
+      await axios.delete(`https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/users/${userSeleccionado._id}`, {
         data: { username: userSeleccionado._id }
       })
       setModalEliminar(false)
