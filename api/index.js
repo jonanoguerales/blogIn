@@ -20,7 +20,7 @@ const usersNuevosRoute = require('./routes/usersNuevos')
 const categoryRoute = require('./routes/categories')// Para conectar con base de datos
 
 const corsOptions = {
-  origen: 'https://blog-in.vercel.app',
+  origen: 'https://apirest-cip5r1lpe-jonanoguerales.vercel.app',
   optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions))
