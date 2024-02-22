@@ -7,7 +7,7 @@ const BarChart = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/posts')
+      const res = await axios.get('http://localhost:3001/api/posts')
       setPosts(res.data)
     }
     fetchPosts()

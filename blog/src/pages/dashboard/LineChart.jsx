@@ -7,7 +7,7 @@ const LineChart = () => {
 
   useEffect(() => {
     const fetchVisits = async () => {
-      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/visitas')
+      const res = await axios.get('http://localhost:3001/api/visitas')
       setVisits(res.data)
     }
     fetchVisits()

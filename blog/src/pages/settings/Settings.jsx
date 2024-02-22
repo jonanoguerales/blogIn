@@ -15,11 +15,11 @@ const Settings = () => {
   const [telefono, setTelefono] = useState('')
   const [success, setSuccess] = useState(false)
   const { user, dispatch } = useContext(Context)
-  const PF = 'https://apirest-cip5r1lpe-jonanoguerales.vercel.app/images/'
+  const PF = 'http://localhost:3001/images/'
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/users/${user._id}`, {
+      await axios.delete(`http://localhost:3001/api/users/${user._id}`, {
         data: { username: user.username }
       })
       dispatch({ type: 'LOGOUT' })
@@ -44,11 +44,11 @@ const Settings = () => {
       data.append('file', file)
       updatedUser.profilePic = filename
       try {
-        await axios.post('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/upload', data)
+        await axios.post('http://localhost:3001/api/upload', data)
       } catch (err) { console.log(err) }
     }
     try {
-      const res = await axios.put('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/users/' + user._id, updatedUser)
+      const res = await axios.put('http://localhost:3001/api/users/' + user._id, updatedUser)
       setSuccess(true)
       dispatch({ type: 'UPDATE_SUCCESS', payload: res.data })
       setInterval(window.location.reload(), 5000)

@@ -49,7 +49,7 @@ const Register = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/users')
+      const res = await axios.get('http://localhost:3001/api/users')
       setUsers(res.data)
     }
     fetchUsers()
@@ -76,7 +76,7 @@ const Register = () => {
       if (alluser.includes(username)) {
         setSuccess(true)
       } else {
-        const res = await axios.post('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/auth/register', {
+        const res = await axios.post('http://localhost:3001/api/auth/register', {
           username,
           nombre,
           email,

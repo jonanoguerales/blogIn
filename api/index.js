@@ -20,9 +20,35 @@ const usersNuevosRoute = require('./routes/usersNuevos')
 const categoryRoute = require('./routes/categories')// Para conectar con base de datos
 
 const corsOptions = {
-  origen: 'https://apirest-cip5r1lpe-jonanoguerales.vercel.app',
+  origen: 'http://localhost:3001',
   optionsSuccessStatus: 200
 }
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://Ordenador12:Ordenador12@nvo.7shohhw.mongodb.net/?retryWrites=true&w=majority";
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+async function run() {
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);
+
+
 app.use(cors(corsOptions))
 
 /*
@@ -47,7 +73,7 @@ dotenv.config()
 app.use(express.json())
 app.use('/images', express.static(path.join(__dirname, '/images')))
 
-mongoose.connect('mongodb+srv://Jona:Jona@cluster0.nqu0a.mongodb.net/blog?retryWrites=true&w=majority', {
+mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })

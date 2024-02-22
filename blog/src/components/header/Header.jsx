@@ -5,12 +5,12 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 const Header = () => {
-  const PF = 'https://apirest-cip5r1lpe-jonanoguerales.vercel.app/images/'
+  const PF = 'http://localhost:3001/images/'
 
   const [posts, setPosts] = useState([])
   useEffect(() => {
     const fetchPost = async () => {
-      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/posts')
+      const res = await axios.get('http://localhost:3001/api/posts')
       setPosts(res.data)
     }
     fetchPost()

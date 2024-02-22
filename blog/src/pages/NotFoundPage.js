@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 
 export default function NotFoundPage () {
-  const PF = 'https://apirest-cip5r1lpe-jonanoguerales.vercel.app/images/'
+  const PF = 'http://localhost:3001/images/'
   return (
     <Container style={{ minHeight: '95vh', display: 'flex', alignContent: 'center', alignItems: 'center' }}>
       <Row className='mt-5'>

@@ -13,7 +13,7 @@ export default function SinglePost () {
   const location = useLocation()
   const path = location.pathname.split('/')[2] // Para coger el id del post
   const [post, setPost] = useState({})
-  const PF = 'https://apirest-cip5r1lpe-jonanoguerales.vercel.app/images/'
+  const PF = 'http://localhost:3001/images/'
   const { user } = useContext(Context)
   const [title, setTitle] = useState('')
   const [desc, setDesc] = useState('')
@@ -22,7 +22,7 @@ export default function SinglePost () {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/posts/' + path)
+      const res = await axios.get('http://localhost:3001/api/posts/' + path)
       setPost(res.data)
       setTitle(res.data.title)
       setDesc(res.data.desc)
@@ -32,7 +32,7 @@ export default function SinglePost () {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/posts/${post._id}`, {
+      await axios.delete(`http://localhost:3001/api/posts/${post._id}`, {
         data: { username: user.username }
       })
       window.location.replace('/')
@@ -52,11 +52,11 @@ export default function SinglePost () {
       data.append('file', file)
       updatePost.photo = filename
       try {
-        await axios.post('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/upload', data)
+        await axios.post('http://localhost:3001/api/upload', data)
       } catch (err) { console.log(err) }
     }
     try {
-      await axios.put(`https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/posts/${post._id}`, updatePost)
+      await axios.put(`http://localhost:3001/api/posts/${post._id}`, updatePost)
       setUpdateMode(false)
     } catch (err) { console.log(err) }
   }

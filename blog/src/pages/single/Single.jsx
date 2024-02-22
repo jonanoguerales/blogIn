@@ -11,16 +11,16 @@ const Single = () => {
   const path = location.pathname.split('/')[2]
   const [users, setUsers] = useState([])
   const [posts, setPosts] = useState([])
-  const PF = 'https://apirest-cip5r1lpe-jonanoguerales.vercel.app/images/'
+  const PF = 'http://localhost:3001/images/'
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/posts')
+      const res = await axios.get('http://localhost:3001/api/posts')
       setPosts(res.data)
     }
     fetchPosts()
     const fetchUsers = async () => {
-      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/users')
+      const res = await axios.get('http://localhost:3001/api/users')
       setUsers(res.data)
     }
     fetchUsers()

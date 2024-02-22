@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault()
     dispatch({ type: 'LOGIN_START' })
     try {
-      const res = await axios.post('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/auth/login', {
+      const res = await axios.post('http://localhost:3001/api/auth/login', {
         username: userRef.current.value,
         password: passwordRef.current.value
       })

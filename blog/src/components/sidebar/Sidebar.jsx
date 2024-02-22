@@ -10,12 +10,12 @@ import GetPosts from '../../services/getPosts'
 const Sidebar = () => {
   const [cats, setCats] = useState([])
   const { user } = useContext(Context)
-  const PF = 'https://apirest-cip5r1lpe-jonanoguerales.vercel.app/images/'
+  const PF = 'http://localhost:3001/images/'
   const posts = GetPosts()
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axios.get('https://apirest-cip5r1lpe-jonanoguerales.vercel.app/api/categories')
+      const res = await axios.get('http://localhost:3001/api/categories')
       setCats(res.data)
     }
     getCats()
